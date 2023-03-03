@@ -46,6 +46,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.buttonReInit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -76,15 +77,17 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel2.Controls.Add(this.buttonRotate, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.buttonSpecial, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.buttonAdd, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.buttonRemove, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonReInit, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 775);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -96,9 +99,9 @@
             // buttonRotate
             // 
             this.buttonRotate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRotate.Location = new System.Drawing.Point(351, 3);
+            this.buttonRotate.Location = new System.Drawing.Point(309, 3);
             this.buttonRotate.Name = "buttonRotate";
-            this.buttonRotate.Size = new System.Drawing.Size(342, 89);
+            this.buttonRotate.Size = new System.Drawing.Size(300, 89);
             this.buttonRotate.TabIndex = 3;
             this.buttonRotate.Text = "Rotate";
             this.buttonRotate.UseVisualStyleBackColor = true;
@@ -107,9 +110,9 @@
             // buttonSpecial
             // 
             this.buttonSpecial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSpecial.Location = new System.Drawing.Point(1047, 3);
+            this.buttonSpecial.Location = new System.Drawing.Point(921, 3);
             this.buttonSpecial.Name = "buttonSpecial";
-            this.buttonSpecial.Size = new System.Drawing.Size(342, 89);
+            this.buttonSpecial.Size = new System.Drawing.Size(300, 89);
             this.buttonSpecial.TabIndex = 2;
             this.buttonSpecial.Text = "Special";
             this.buttonSpecial.UseVisualStyleBackColor = true;
@@ -119,9 +122,9 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.Aquamarine;
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAdd.Location = new System.Drawing.Point(699, 3);
+            this.buttonAdd.Location = new System.Drawing.Point(615, 3);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(342, 89);
+            this.buttonAdd.Size = new System.Drawing.Size(300, 89);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -133,7 +136,7 @@
             this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonRemove.Location = new System.Drawing.Point(3, 3);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(342, 89);
+            this.buttonRemove.Size = new System.Drawing.Size(300, 89);
             this.buttonRemove.TabIndex = 0;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = false;
@@ -291,6 +294,18 @@
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
+            // buttonReInit
+            // 
+            this.buttonReInit.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonReInit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonReInit.Location = new System.Drawing.Point(1227, 3);
+            this.buttonReInit.Name = "buttonReInit";
+            this.buttonReInit.Size = new System.Drawing.Size(162, 89);
+            this.buttonReInit.TabIndex = 4;
+            this.buttonReInit.Text = "Filter Album again";
+            this.buttonReInit.UseVisualStyleBackColor = false;
+            this.buttonReInit.Click += new System.EventHandler(this.buttonReInit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -336,6 +351,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button buttonReInit;
     }
 }
 

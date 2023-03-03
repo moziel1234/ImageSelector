@@ -146,5 +146,15 @@ namespace ImageSelector
         {
             MoveFileAndDisplayImage(specialPath);            
         }
+
+        private void buttonReInit_Click(object sender, EventArgs e)
+        {
+            DirectoryInfo dir = new DirectoryInfo(albumPath);
+            foreach (FileInfo file in dir.GetFiles())
+            {
+                file.MoveTo($@"{imagePath}\{file.Name}");
+            }
+            Application.Restart();
+        }
     }
 }
