@@ -13,12 +13,12 @@ namespace ImageSelector
 {
     public partial class Form1 : Form
     {
-        string imagePath = @"C:\Users\mosheo\Desktop\ItalyImages";
-        string imagePath2 = @"C:\Users\mosheo\Desktop\ItalyImages\yifat_images";
+        static string imagePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\SelectorImages";
+        string imagePath2 = imagePath + @"\AddMoreHere";
 
-        string albumPath = @"C:\Users\mosheo\Desktop\ItalyImages\album";
-        string garbagePath = @"C:\Users\mosheo\Desktop\ItalyImages\garbage";
-        string specialPath = @"C:\Users\mosheo\Desktop\ItalyImages\special";
+        string albumPath = imagePath + @"\album";
+        string garbagePath = imagePath + @"\garbage";
+        string specialPath = imagePath + @"\special";
 
         List<string> paths;
         int ind = 0;
@@ -26,7 +26,11 @@ namespace ImageSelector
         public Form1()
         {
             InitializeComponent();
-
+            System.IO.Directory.CreateDirectory(imagePath);
+            System.IO.Directory.CreateDirectory(imagePath2);
+            System.IO.Directory.CreateDirectory(albumPath);
+            System.IO.Directory.CreateDirectory(garbagePath);
+            System.IO.Directory.CreateDirectory(specialPath);
             string[] arr1 = Directory.GetFiles(imagePath, "*.jpg");
             string[] arr2 = Directory.GetFiles(imagePath2, "*.jpg");
 
